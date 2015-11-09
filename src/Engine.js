@@ -16,7 +16,7 @@ var Engine = function () {
 
             }
         }
-    }
+    };
     this.juxtaposition = function(){
 
         // test horisontal
@@ -26,7 +26,7 @@ var Engine = function () {
 
             for (j = 0; j < 6; j++) {
 
-                if (plateau[i][j] === plateau[i + 1][j] && plateau[i][j] != "empty" ) {
+                if (plateau[i][j] === plateau[i + 1][j] && plateau[i][j] !== "empty" ) {
 
                     throw new this.not_empty_exception();
 
@@ -41,7 +41,7 @@ var Engine = function () {
 
             for (j = 0; j < 5; j++) {
 
-                if (plateau[j][i] === plateau[j + 1][i] && plateau[j][i] != "empty" ) {
+                if (plateau[j][i] === plateau[j + 1][i] && plateau[j][i] !== "empty" ) {
 
                     throw new this.not_empty_exception();
 
@@ -51,7 +51,7 @@ var Engine = function () {
             }
         }
 
-    }
+    };
     this.display = function(){
 
         for (i = 0; i < 6; i++) {
@@ -65,7 +65,7 @@ var Engine = function () {
             }
         }
 
-    }
+    };
 
 // public methods
 };
