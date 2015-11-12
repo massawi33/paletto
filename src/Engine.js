@@ -78,6 +78,7 @@ var Engine = function () {
         if(plateau[a][b] === color){
 
             plateau[a][b] = "empty";
+            this.juxtaposition();
             // 0 jaune , 1 noir , 2 rouge , 3 bleu , 4 blanc , 5 vert
             if (color === "jaune") {
                 player_2 [0] = player_2 [0] + 1;
