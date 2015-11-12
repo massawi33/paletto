@@ -3,7 +3,7 @@
 var PalettoTestCase = TestCase("PalettoTestCase");
 
 var a = new Engine();
-a.init();
+//a.init();
 
 PalettoTestCase.prototype.testStory1 = function () {
 

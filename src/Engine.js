@@ -1,11 +1,18 @@
-'use strict';
+
 
 var Engine = function () {
-
+    'use strict';
 // private attributes and methods
-    var plateau = new Array(6);
+    //var plateau = new Array(6);
+    var plateau = [["noir", "vert", "blanc", "bleu", "rouge", "blanc"],
+        ["jaune", "blanc", "vert", "rouge", "jaune", "bleu"],
+        ["bleu", "jaune", "bleu", "blanc", "noir", "rouge"],
+        ["rouge", "noir", "rouge", "vert", "bleu", "blanc"],
+        ["blanc", "vert", "jaune", "noir", "jaune", "vert"],
+        ["jaune", "bleu", "noir", "rouge", "vert", "noir"]
+    ];
     var i,j;
-    this.init = function() {
+    /*this.init = function() {
         for (i = 0; i < 6; i++) {
 
             plateau[i] = new Array(6);
@@ -16,7 +23,8 @@ var Engine = function () {
 
             }
         }
-    };
+
+    };*/
     this.juxtaposition = function(){
 
         // test horisontal
@@ -38,7 +46,7 @@ var Engine = function () {
         for (i = 0; i < 6; i++) {
 
 
-
+            // test Vertical
             for (j = 0; j < 5; j++) {
 
                 if (plateau[j][i] === plateau[j + 1][i] && plateau[j][i] !== "empty" ) {
