@@ -73,6 +73,39 @@ var Engine = function () {
         return player_2;
 
     };
+    this.move_player1 =function(a , b , color){
+        //var found = -1;
+        if(plateau[a][b] === color){
+
+            plateau[a][b] = "empty";
+            this.juxtaposition();
+            // 0 jaune , 1 noir , 2 rouge , 3 bleu , 4 blanc , 5 vert
+            if (color === "jaune") {
+                player_1 [0] = player_1 [0] + 1;
+            }else if (color === "noir") {
+                player_1 [1] = player_1 [1] + 1;
+            }else if (color === "rouge") {
+                player_1 [2] = player_1 [2] + 1;
+            }else if (color === "bleu") {
+                player_1 [3] = player_1 [3] + 1;
+            }else if (color === "blanc") {
+                player_1 [4] = player_1 [4] + 1;
+            }else if (color === "vert") {
+                player_1 [5] = player_1 [5] + 1;
+            }
+
+            return true;
+
+        }else {
+            return false;
+        }
+
+
+
+
+
+
+    };
     this.move_player2 =function(a , b , color){
         //var found = -1;
         if(plateau[a][b] === color){
