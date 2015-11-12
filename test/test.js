@@ -10,3 +10,8 @@ PalettoTestCase.prototype.testStory1 = function () {
     a.juxtaposition();
 
 };
+PalettoTestCase.prototype.testStory2 = function () {
+
+    assertTrue(a.firstmove_player1());
+
+};

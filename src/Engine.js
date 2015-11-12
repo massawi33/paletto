@@ -34,9 +34,9 @@ var Engine = function () {
 
             for (j = 0; j < 6; j++) {
 
-                if (plateau[i][j] === plateau[i + 1][j] && plateau[i][j] !== "empty" ) {
+                if (plateau[i][j] === plateau[i + 1][j] /* && plateau[i][j] !== "empty"*/ ) {
 
-                    throw new this.not_empty_exception();
+                    throw "Error";
 
 
                 }
@@ -49,9 +49,9 @@ var Engine = function () {
             // test Vertical
             for (j = 0; j < 5; j++) {
 
-                if (plateau[j][i] === plateau[j + 1][i] && plateau[j][i] !== "empty" ) {
+                if (plateau[j][i] === plateau[j + 1][i]/* && plateau[j][i] !== "empty" */) {
 
-                    throw new this.not_empty_exception();
+                    throw "Error";
 
 
                 }
@@ -60,6 +60,36 @@ var Engine = function () {
         }
 
     };
+    this.firstmove_player1 = function(){
+
+        if(plateau[0][0] === "jaune"){
+
+            plateau[0][0] = "empty1";
+            return true;
+
+        }else if(plateau[0][5] === "jaune"){
+
+            plateau[0][5] = "empty1";
+            return true;
+
+        }else if(plateau[5][5] === "jaune"){
+
+            plateau[5][5] = "empty1";
+            return true;
+
+        }else if (plateau[5][0] === "jaune"){
+
+            plateau[0][0] = "empty1";
+            return true;
+
+
+        }
+        return false;
+
+
+
+
+        };
     this.display = function(){
 
         for (i = 0; i < 6; i++) {
