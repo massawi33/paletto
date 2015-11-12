@@ -28,3 +28,9 @@ PalettoTestCase.prototype.testStory4 = function () {
     //a.display_care();
 
 };
+PalettoTestCase.prototype.testStory5 = function () {
+
+
+
+
+};
