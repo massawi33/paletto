@@ -63,6 +63,184 @@ var Engine = function () {
         }
 
     };
+    this.check_voisin = function(a ,b){
+            var check = 0 ;
+        if (a === 5 && b === 5) {
+
+            if (plateau[a][b - 1] !== "empty") {
+
+                check = check + 1;
+
+            }
+
+            if (plateau[a - 1][b] !== "empty") {
+
+                check = check + 1;
+            }
+
+            if (check > 2) {
+
+                return false;
+
+            } else {
+
+                return true;
+            }
+        }else if (a === 0 && b === 0) {
+            if (plateau[a][b + 1] !== "empty") {
+                check = check + 1;
+            }
+
+            if (plateau[a + 1][b] !== "empty") {
+
+                check = check + 1;
+            }
+
+
+            if (check > 2) {
+
+                return false;
+
+            } else {
+
+                return true;
+            }
+        } else if (a === 0 && b === 5) {
+
+            if (plateau[a][b - 1] !== "empty") {
+
+                check = check + 1;
+
+            }
+            if (plateau[a + 1][b] !== "empty") {
+
+                check = check + 1;
+            }
+
+
+            if (check > 2) {
+
+                return false;
+
+            } else {
+
+                return true;
+            }
+        } else if (a === 5 && b === 0) {
+            if (plateau[a][b + 1] !== "empty") {
+                check = check + 1;
+            }
+
+
+            if (plateau[a - 1][b] !== "empty") {
+
+                check = check + 1;
+            }
+
+            if (check > 2) {
+
+                return false;
+
+            } else {
+
+                return true;
+            }
+        } else if (a === 5) {
+            if (plateau[a][b + 1] !== "empty") {
+                check = check + 1;
+            }
+            if (plateau[a][b - 1] !== "empty") {
+
+                check = check + 1;
+
+            }
+
+            if (plateau[a - 1][b] !== "empty") {
+
+                check = check + 1;
+            }
+
+            if (check > 2) {
+
+                return false;
+
+            } else {
+
+                return true;
+            }
+        } else if (a === 0) {
+            if (plateau[a][b + 1] !== "empty") {
+                check = check + 1;
+            }
+            if (plateau[a][b - 1] !== "empty") {
+
+                check = check + 1;
+
+            }
+            if (plateau[a + 1][b] !== "empty") {
+
+                check = check + 1;
+            }
+
+
+            if (check > 2) {
+
+                return false;
+
+            } else {
+
+                return true;
+            }
+        }else if (b === 5) {
+
+            if (plateau[a][b - 1] !== "empty") {
+
+                check = check + 1;
+
+            }
+            if (plateau[a + 1][b] !== "empty") {
+
+                check = check + 1;
+            }
+            if (plateau[a - 1][b] !== "empty") {
+
+                check = check + 1;
+            }
+
+            if (check > 2) {
+
+                return false;
+
+            } else {
+
+                return true;
+            }
+        }else if (b === 0) {
+            if (plateau[a][b + 1] !== "empty") {
+                check = check + 1;
+            }
+
+            if (plateau[a + 1][b] !== "empty") {
+
+                check = check + 1;
+            }
+            if (plateau[a - 1][b] !== "empty") {
+
+                check = check + 1;
+            }
+
+            if (check > 2) {
+
+                return false;
+
+            } else {
+
+                return true;
+            }
+        }
+
+
+    };
     this.check_player_1 = function(){
 
         return player_1;
