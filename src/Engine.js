@@ -4,6 +4,9 @@ var Engine = function () {
     'use strict';
 // private attributes and methods
     //var plateau = new Array(6);
+
+    var player_1 = new Array(6);// 0 jaune , 1 noir , 2 rouge , 3 bleu , 4 blanc , 5 vert
+
     var plateau = [["noir", "vert", "blanc", "bleu", "rouge", "blanc"],
         ["jaune", "blanc", "vert", "rouge", "jaune", "bleu"],
         ["bleu", "jaune", "bleu", "blanc", "noir", "rouge"],
@@ -34,7 +37,7 @@ var Engine = function () {
 
             for (j = 0; j < 6; j++) {
 
-                if (plateau[i][j] === plateau[i + 1][j] /* && plateau[i][j] !== "empty"*/ ) {
+                if (plateau[i][j] === plateau[i + 1][j] && plateau[i][j] !== "empty") {
 
                     throw "Error";
 
@@ -49,7 +52,7 @@ var Engine = function () {
             // test Vertical
             for (j = 0; j < 5; j++) {
 
-                if (plateau[j][i] === plateau[j + 1][i]/* && plateau[j][i] !== "empty" */) {
+                if (plateau[j][i] === plateau[j + 1][i] && plateau[j][i] !== "empty" ) {
 
                     throw "Error";
 
@@ -64,22 +67,26 @@ var Engine = function () {
 
         if(plateau[0][0] === "jaune"){
 
-            plateau[0][0] = "empty1";
+            plateau[0][0] = "empty";
+            player_1 [0] = 1;
             return true;
 
         }else if(plateau[0][5] === "jaune"){
 
-            plateau[0][5] = "empty1";
+            plateau[0][5] = "empty";
+            player_1 [0] = 1;
             return true;
 
         }else if(plateau[5][5] === "jaune"){
 
-            plateau[5][5] = "empty1";
+            plateau[5][5] = "empty";
+            player_1 [0] = 1;
             return true;
 
         }else if (plateau[5][0] === "jaune"){
 
-            plateau[0][0] = "empty1";
+            plateau[0][0] = "empty";
+            player_1 [0] = 1;
             return true;
 
 
