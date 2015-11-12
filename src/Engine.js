@@ -139,6 +139,14 @@ var Engine = function () {
 
 
     };
+    this.check_Connection = function(a,b){
+
+
+
+
+
+
+    }
     /*this.firstmove_player2= function(){
 
         var found = -1;
