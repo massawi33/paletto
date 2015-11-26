@@ -237,6 +237,35 @@ var Engine = function () {
 
                 return true;
             }
+        } else {
+
+            if (plateau[a][b + 1] !== "empty") {
+                check = check + 1;
+            }
+
+            if (plateau[a][b - 1] !== "empty") {
+
+                check = check + 1;
+
+            }
+            if (plateau[a + 1][b] !== "empty") {
+
+                check = check + 1;
+            }
+            if (plateau[a - 1][b] !== "empty") {
+
+                check = check + 1;
+            }
+
+            if (check > 2) {
+
+                return false;
+
+            } else {
+
+                return true;
+            }
+
         }
 
 

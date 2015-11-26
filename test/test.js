@@ -33,10 +33,14 @@ PalettoTestCase.prototype.testStory4 = function () {
 PalettoTestCase.prototype.testStory5 = function () {
 
 
+
     assertTrue(a.check_Connection(2,2));
 
 
 
+
+
+    assertTrue(a.check_voisin(0,0));
 
 
 };
